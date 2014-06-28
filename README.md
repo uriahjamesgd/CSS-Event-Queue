@@ -35,16 +35,16 @@ Allows you to both ADD and REMOVE CSS classes from DOM elements, synchronously a
 
   1.) Object being targeted
 
-    • task_onDomLd_animation3
+    task_onDomLd_animation3
     
   2.) Whether a class is to be Added or Removed (class is being added is this example)
   
-    • +
+    +
 
   3.) The class name to be added
   
-    • lightSpeedIn
+    lightSpeedIn
   
   4.) The duration: (in this example the class 'lightSpeedIn' will be added to 'task_onDomLd_animation3' after '200' milliseconds has elapsed)
   
-    • 200
+    200
