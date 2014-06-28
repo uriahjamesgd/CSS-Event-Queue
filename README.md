@@ -31,7 +31,7 @@ Allows you to both ADD and REMOVE CSS classes from DOM elements, synchronously a
 
 ## Sample Task Scheduler (Sample 'Line')
 
-***{'task_onDomLd_animation3': '+lightSpeedIn_200'}***
+***e.g. : {'task_onDomLd_animation3': '+lightSpeedIn_200'}***
 
   • task_onDomLd_animation3
 
