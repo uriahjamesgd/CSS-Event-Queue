@@ -285,14 +285,6 @@ $(function () {
     })();
 
 
-    //(function task_onClick(){$("[class*='task_onClick']").on("click",function(){function a(e,t){var n=JSON.stringify(e);var r=n.match(/"(.*?)"/);var i=n.split(":")[1];var s=i.slice(1,-2);var o=s.substr(0,s.indexOf("_"));var u=s.split("_").pop();if(o.indexOf("+")>=0){var a=o.slice(1);setTimeout(function(){$("."+r[1]).addClass(a);t()},u)}else if(o.indexOf("-")>=0){var f=o.slice(1);setTimeout(function(){$("."+r[1]).removeClass(f);t()},u)}}function n(e){if(y.length==0){e()}else{a(y[0],function(){y.splice(0,1);n(e)})}}var object=$(this);var z=eval(object.attr("class").match(/(task_onClick_.*?)(?:\s+|$)/)[1]);var y=z.slice(0);n(function(){})})})();
-
-    //(function task_onHover(){$("[class*='task_onHover']").mouseover(function(){function a(e,t){var n=JSON.stringify(e);var r=n.match(/"(.*?)"/);var i=n.split(":")[1];var s=i.slice(1,-2);var o=s.substr(0,s.indexOf("_"));var u=s.split("_").pop();if(o.indexOf("+")>=0){var a=o.slice(1);setTimeout(function(){$("."+r[1]).addClass(a);t()},u)}else if(o.indexOf("-")>=0){var f=o.slice(1);setTimeout(function(){$("."+r[1]).removeClass(f);t()},u)}}function n(e){if(y.length==0){e()}else{a(y[0],function(){y.splice(0,1);n(e)})}}var object=$(this);var z=eval(object.attr("class").match(/(task_onHover_.*?)(?:\s+|$)/)[1]);var y=z.slice(0);n(function(){})})})();
-
-    //$(document).ready(function(){(function task_onDomLd(){function a(e,t){var n=JSON.stringify(e);var r=n.match(/"(.*?)"/);var i=n.split(":")[1];var s=i.slice(1,-2);var o=s.substr(0,s.indexOf("_"));var u=s.split("_").pop();if(o.indexOf("+")>=0){var a=o.slice(1);setTimeout(function(){$("."+r[1]).addClass(a);t()},u)}else if(o.indexOf("-")>=0){var f=o.slice(1);setTimeout(function(){$("."+r[1]).removeClass(f);t()},u)}}function n(e){if(y.length==0){e()}else{a(y[0],function(){y.splice(0,1);n(e)})}}var object=$("[class*='task_onDomLd']");var z=eval(object.attr("class").match(/(task_onDomLd_.*?)(?:\s+|$)/)[1]);var y=z.slice(0);n(function(){})})()});
-
-    //(function task_onActiveC(){if($("div").hasClass("activec")){var object=$("div").attr("class").split(" ")[0];var cloneReturnArrayTasks=eval(object);var returnArrayTasks=cloneReturnArrayTasks.slice(0);function asyncFunc(e,t){var n=JSON.stringify(e);var r=n.match(/"(.*?)"/)[0].slice(1,-1);var i=n.split(":")[1];var s=i.slice(1,-2);var o=s.substr(0,s.indexOf("_"));var u=s.split("_").pop();if(o.indexOf("+")>=0){var a=o.slice(1);setTimeout(function(){$("."+r).addClass(a);t()},u)}else if(o.indexOf("-")>=0){var f=o.slice(1);setTimeout(function(){$("."+r).removeClass(f);t()},u)}}function loopThroughArgs(e){if(returnArrayTasks.length==0){e()}else{asyncFunc(returnArrayTasks[0],function(){returnArrayTasks.splice(0,1);loopThroughArgs(e)})}}loopThroughArgs(function(){})}else{setTimeout(task_onActiveC,1)}})()
-
 });
 </script>
 
