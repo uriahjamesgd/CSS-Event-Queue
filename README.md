@@ -27,3 +27,24 @@ Allows you to both ADD and REMOVE CSS classes from DOM elements, synchronously a
   • Specify: The class name to be added
   
   • Secify: The duration (If your duration is '300' then your class will be either Added or Removed after '300' milliseconds)
+
+
+## Sample Task Scheduler (Sample 'Line')
+
+***{'task_onDomLd_animation3': '+lightSpeedIn_200'}***
+
+  • task_onDomLd_animation3
+
+    • Object being targeted
+    
+  • +
+  
+    • Whether a class is to be Added or Removed (class is being added is this example)
+
+  • lightSpeedIn
+  
+    • The class name to be added
+  
+  • 200
+  
+    • The duration: (in this example the class 'lightSpeedIn' will be added to 'task_onDomLd_animation3' after '200' milliseconds has elapsed)
