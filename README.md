@@ -20,31 +20,31 @@ Allows you to both ADD and REMOVE CSS classes from DOM elements, synchronously a
 ## Task Scheduler
 'Task Schedulers' are a set of instructions for executing your animations. Each Task Scheduler accepts '4' paramaters per line, each 'line' within a task scheduler represents an instance (a moment in time where an object is targeted, a class is ethier added or removed, and a duration after which the event line will occur or begin.): The '4' Parameters per line are as follow:
 
-  • Specify: Object being targeted
+  1.) Object being targeted
   
-  • Specify: Whether a class is to be Added or Removed (+,-)
+  2.) Whether a class is to be Added or Removed (+,-)
   
-  • Specify: The class name to be added
+  3.) Specify: The class name to be added
   
-  • Secify: The duration (If your duration is '300' then your class will be either Added or Removed after '300' milliseconds)
+  4.) The duration (If your duration is '300' then your class will be either Added or Removed after '300' milliseconds)
 
 
 ## Sample Task Scheduler (Sample 'Line')
 
 ***e.g. : {'task_onDomLd_animation3': '+lightSpeedIn_200'}***
 
-  • task_onDomLd_animation3
+  1.) task_onDomLd_animation3
 
     • Object being targeted
     
-  • +
+  2.) +
   
     • Whether a class is to be Added or Removed (class is being added is this example)
 
-  • lightSpeedIn
+  3.) lightSpeedIn
   
     • The class name to be added
   
-  • 200
+  4.) 200
   
     • The duration: (in this example the class 'lightSpeedIn' will be added to 'task_onDomLd_animation3' after '200' milliseconds has elapsed)
