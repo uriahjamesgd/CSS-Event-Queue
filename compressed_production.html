@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Untitled Document</title>
+    <link href="/css/vendor/animate.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <style>
+        body {
+            margin: 100px;
+        }
+
+        .task_onClick_animation1,
+        .task_onHover_animation2,
+        .task_onDomLd_animation3,
+        .task_onDomLd_animation4,
+        .duddy {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background-color: #1cc7ff;
+        }
+
+        .one {
+            width: 400px;
+        }
+
+        .two {
+            height: 300px;
+        }
+
+        .three {
+            background-color: #b81900;
+        }
+
+        .four {
+            opacity: .5;
+        }
+
+        .five {
+            width: 100px;
+            height: 125px;
+            opacity: 1;
+        }
+    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.js"><\/script>')</script>
+</head>
+
+<body>
+
+<script>
+$(function () {
+
+    /**
+     * Module Name: Animation Class Queue:
+     * Parent App: Summa Elite (https://github.com/uriahjamesgd/Summa-Elite-Public)
+     * Author: Uriah Rittenhouse (www.stonefish-web-guru.com | www.biglemonade.com)
+     * Released: 05.29.2014
+     * License: (MIT License) This content is released under the MIT License.
+     * Dependencies: jquery.1.11.0 or older, animate.css, Internal CSS Styles (included)
+     */
+
+    /**
+     * task Schedulers
+     * 1000 milliseconds = 1 second && 60000 milliseconds = 1 minute
+     */
+    var task_onClick_animation1 = [
+        {'task_onClick_animation1': '+lightSpeedIn_300'},
+        {'task_onClick_animation1': '-lightSpeedIn_1000'},
+        {'task_onClick_animation1': '+tada_800'},
+        {'task_onClick_animation1': '-tada_900'},
+        {'duddy': '+pulse_1000'},
+        {'duddy': '-pulse_500'}
+    ];
+    var task_onHover_animation2 = [
+        {'task_onHover_animation2': '+lightSpeedIn_300'},
+        {'task_onHover_animation2': '-lightSpeedIn_1000'},
+        {'task_onHover_animation2': '+tada_800'},
+        {'task_onHover_animation2': '-tada_900'},
+        {'duddy': '+pulse_1000'},
+        {'duddy': '-pulse_500'}
+    ];
+    var task_onDomLd_animation3 = [
+        {'task_onDomLd_animation3': '+lightSpeedIn_200'},
+        {'task_onDomLd_animation3': '-lightSpeedIn_200'},
+        {'task_onDomLd_animation3': '+tada_100'},
+        {'task_onDomLd_animation3': '-tada_100'},
+        {'duddy': '+pulse_100'},
+        {'duddy': '-pulse_100'},
+        {'duddy': '+activec_100'}
+    ];
+    var task_onActiveC_animation0 = [
+        {'task_onActiveC_animation0': '+wobble_300'},
+        {'task_onActiveC_animation0': '-wobble_1000'},
+        {'task_onActiveC_animation0': '+lightSpeedIn_800'},
+        {'task_onActiveC_animation0': '-lightSpeedIn_900'},
+        {'duddy': '+pulse_1000'},
+        {'duddy': '-pulse_500'}
+    ];
+
+    (function task_onClick() {
+        /**
+         * task_onClick Event
+         */
+        $("[class*='task_onClick']").on('click', function () {
+            var object = $(this);
+            var cloneReturnArrayTasks = eval(object.attr("class").match(/(task_onClick_.*?)(?:\s+|$)/)[1]);
+            var returnArrayTasks = cloneReturnArrayTasks.slice(0);
+            function asyncFunc(i, callback) {
+                var stringify = JSON.stringify(i);
+                var target = stringify.match(/"(.*?)"/);
+                var value = stringify.split(':')[1];
+                var valueSliced = value.slice(1, -2);
+                var sliceValue = valueSliced.substr(0, valueSliced.indexOf('_'));
+                var key = valueSliced.split("_").pop();
+                if (sliceValue.indexOf('+') >= 0) {
+                    var sliceValuePlusSign = sliceValue.slice(1);
+                    setTimeout(function () {
+                        $('.' + target[1]).addClass(sliceValuePlusSign);
+                        callback();
+                    }, key);
+                } else if (sliceValue.indexOf('-') >= 0) {
+                    var sliceValueMinusSign = sliceValue.slice(1);
+                    setTimeout(function () {
+                        $('.' + target[1]).removeClass(sliceValueMinusSign);
+                        callback();
+                    }, key);
+                }
+            }
+            function loopThroughArgs(callback) {
+                if (returnArrayTasks.length == 0) {
+                    callback();
+                }
+                else {
+                    asyncFunc(returnArrayTasks[0], function () {
+                        returnArrayTasks.splice(0, 1);
+                        loopThroughArgs(callback);
+                    })
+                }
+            }
+            loopThroughArgs(function () {
+            });
+        });
+    })();
+
+
+    (function task_onHover() {
+        /**
+         * task_onHover Event
+         */
+        $("[class*='task_onHover']").mouseover(function () {
+            var object = $(this);
+            var cloneReturnArrayTasks = eval(object.attr("class").match(/(task_onHover_.*?)(?:\s+|$)/)[1]);
+            var returnArrayTasks = cloneReturnArrayTasks.slice(0);
+            function asyncFunc(i, callback) {
+                var stringify = JSON.stringify(i);
+                var target = stringify.match(/"(.*?)"/);
+                var value = stringify.split(':')[1];
+                var valueSliced = value.slice(1, -2);
+                var sliceValue = valueSliced.substr(0, valueSliced.indexOf('_'));
+                var key = valueSliced.split("_").pop();
+                if (sliceValue.indexOf('+') >= 0) {
+                    var sliceValuePlusSign = sliceValue.slice(1);
+                    setTimeout(function () {
+                        $('.' + target[1]).addClass(sliceValuePlusSign);
+                        callback();
+                    }, key);
+                } else if (sliceValue.indexOf('-') >= 0) {
+                    var sliceValueMinusSign = sliceValue.slice(1);
+                    setTimeout(function () {
+                        $('.' + target[1]).removeClass(sliceValueMinusSign);
+                        callback();
+                    }, key);
+                }
+            }
+            function loopThroughArgs(callback) {
+                if (returnArrayTasks.length == 0) {
+                    callback();
+                }
+                else {
+                    asyncFunc(returnArrayTasks[0], function () {
+                        returnArrayTasks.splice(0, 1);
+                        loopThroughArgs(callback);
+                    })
+                }
+            }
+            loopThroughArgs(function () {
+            });
+        });
+    })();
+
+    $(document).ready(function () {
+        (function task_onDomLd() {
+            /**
+             * task_onDomLd Event
+             */
+            var object = $("[class*='task_onDomLd']");
+            var cloneReturnArrayTasks = eval(object.attr("class").match(/(task_onDomLd_.*?)(?:\s+|$)/)[1]);
+            var returnArrayTasks = cloneReturnArrayTasks.slice(0);
+            function asyncFunc(i, callback) {
+                var stringify = JSON.stringify(i);
+                var target = stringify.match(/"(.*?)"/);
+                var value = stringify.split(':')[1];
+                var valueSliced = value.slice(1, -2);
+                var sliceValue = valueSliced.substr(0, valueSliced.indexOf('_'));
+                var key = valueSliced.split("_").pop();
+                if (sliceValue.indexOf('+') >= 0) {
+                    var sliceValuePlusSign = sliceValue.slice(1);
+                    setTimeout(function () {
+                        $('.' + target[1]).addClass(sliceValuePlusSign);
+                        callback();
+                    }, key);
+                } else if (sliceValue.indexOf('-') >= 0) {
+                    var sliceValueMinusSign = sliceValue.slice(1);
+                    setTimeout(function () {
+                        $('.' + target[1]).removeClass(sliceValueMinusSign);
+                        callback();
+                    }, key);
+                }
+            }
+            function loopThroughArgs(callback) {
+                if (returnArrayTasks.length == 0) {
+                    callback();
+                }
+                else {
+                    asyncFunc(returnArrayTasks[0], function () {
+                        returnArrayTasks.splice(0, 1);
+                        loopThroughArgs(callback);
+                    })
+                }
+            }
+            loopThroughArgs(function () {
+            });
+        })();
+    });
+
+
+
+    (function task_onActiveC() {
+        /**
+         * task_onActiveC Event
+         */
+        if ($('div').hasClass('activec')) {
+            var object = $('div').attr('class').split(' ')[0];
+            var cloneReturnArrayTasks = eval(object);
+            var returnArrayTasks = cloneReturnArrayTasks.slice(0);
+            function asyncFunc(i, callback) {
+                var stringify = JSON.stringify(i);
+                var target = (stringify.match(/"(.*?)"/)[0]).slice(1, -1);
+                var value = stringify.split(':')[1];
+                var valueSliced = value.slice(1, -2);
+                var sliceValue = valueSliced.substr(0, valueSliced.indexOf('_'));
+                var key = valueSliced.split("_").pop();
+                if (sliceValue.indexOf('+') >= 0) {
+                    var sliceValuePlusSign = sliceValue.slice(1);
+                    setTimeout(function () {
+                        $('.' + target).addClass(sliceValuePlusSign);
+                        callback();
+                    }, key);
+                } else if (sliceValue.indexOf('-') >= 0) {
+                    var sliceValueMinusSign = sliceValue.slice(1);
+                    setTimeout(function () {
+                        $('.' + target).removeClass(sliceValueMinusSign);
+                        callback();
+                    }, key);
+                }
+            }
+            function loopThroughArgs(callback) {
+                if (returnArrayTasks.length == 0) {
+                    callback();
+                }
+                else {
+                    asyncFunc(returnArrayTasks[0], function () {
+                        returnArrayTasks.splice(0, 1);
+                        loopThroughArgs(callback);
+                    })
+                }
+            }
+            loopThroughArgs(function () {
+            });
+        }
+        else {
+            setTimeout(task_onActiveC, 1);
+        }
+    })();
+
+
+    //(function task_onClick(){$("[class*='task_onClick']").on("click",function(){function a(e,t){var n=JSON.stringify(e);var r=n.match(/"(.*?)"/);var i=n.split(":")[1];var s=i.slice(1,-2);var o=s.substr(0,s.indexOf("_"));var u=s.split("_").pop();if(o.indexOf("+")>=0){var a=o.slice(1);setTimeout(function(){$("."+r[1]).addClass(a);t()},u)}else if(o.indexOf("-")>=0){var f=o.slice(1);setTimeout(function(){$("."+r[1]).removeClass(f);t()},u)}}function n(e){if(y.length==0){e()}else{a(y[0],function(){y.splice(0,1);n(e)})}}var object=$(this);var z=eval(object.attr("class").match(/(task_onClick_.*?)(?:\s+|$)/)[1]);var y=z.slice(0);n(function(){})})})();
+
+    //(function task_onHover(){$("[class*='task_onHover']").mouseover(function(){function a(e,t){var n=JSON.stringify(e);var r=n.match(/"(.*?)"/);var i=n.split(":")[1];var s=i.slice(1,-2);var o=s.substr(0,s.indexOf("_"));var u=s.split("_").pop();if(o.indexOf("+")>=0){var a=o.slice(1);setTimeout(function(){$("."+r[1]).addClass(a);t()},u)}else if(o.indexOf("-")>=0){var f=o.slice(1);setTimeout(function(){$("."+r[1]).removeClass(f);t()},u)}}function n(e){if(y.length==0){e()}else{a(y[0],function(){y.splice(0,1);n(e)})}}var object=$(this);var z=eval(object.attr("class").match(/(task_onHover_.*?)(?:\s+|$)/)[1]);var y=z.slice(0);n(function(){})})})();
+
+    //$(document).ready(function(){(function task_onDomLd(){function a(e,t){var n=JSON.stringify(e);var r=n.match(/"(.*?)"/);var i=n.split(":")[1];var s=i.slice(1,-2);var o=s.substr(0,s.indexOf("_"));var u=s.split("_").pop();if(o.indexOf("+")>=0){var a=o.slice(1);setTimeout(function(){$("."+r[1]).addClass(a);t()},u)}else if(o.indexOf("-")>=0){var f=o.slice(1);setTimeout(function(){$("."+r[1]).removeClass(f);t()},u)}}function n(e){if(y.length==0){e()}else{a(y[0],function(){y.splice(0,1);n(e)})}}var object=$("[class*='task_onDomLd']");var z=eval(object.attr("class").match(/(task_onDomLd_.*?)(?:\s+|$)/)[1]);var y=z.slice(0);n(function(){})})()});
+
+    //(function task_onActiveC(){if($("div").hasClass("activec")){var object=$("div").attr("class").split(" ")[0];var cloneReturnArrayTasks=eval(object);var returnArrayTasks=cloneReturnArrayTasks.slice(0);function asyncFunc(e,t){var n=JSON.stringify(e);var r=n.match(/"(.*?)"/)[0].slice(1,-1);var i=n.split(":")[1];var s=i.slice(1,-2);var o=s.substr(0,s.indexOf("_"));var u=s.split("_").pop();if(o.indexOf("+")>=0){var a=o.slice(1);setTimeout(function(){$("."+r).addClass(a);t()},u)}else if(o.indexOf("-")>=0){var f=o.slice(1);setTimeout(function(){$("."+r).removeClass(f);t()},u)}}function loopThroughArgs(e){if(returnArrayTasks.length==0){e()}else{asyncFunc(returnArrayTasks[0],function(){returnArrayTasks.splice(0,1);loopThroughArgs(e)})}}loopThroughArgs(function(){})}else{setTimeout(task_onActiveC,1)}})()
+
+});
+</script>
+
+<div class="task_onActiveC_animation0 duddy animooted"></div>
+<div class="task_onClick_animation1 animooted">Value added to this div.</div>
+<div class="task_onHover_animation2 animooted">Value added to this div.</div>
+<div class="task_onDomLd_animation3 animooted">Value added to this div.</div>
+
+
+</body>
+</html>
