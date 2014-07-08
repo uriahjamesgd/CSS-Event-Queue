@@ -4,6 +4,8 @@
     "description": "CSS Event Queue - Synchronous / Asynchronous Javascript event queue for CSS Classes",
     "keywords": [
         "jquery",
+        "queue",
+        "animate",
         "animation"
     ],
     "version": "1.0",
