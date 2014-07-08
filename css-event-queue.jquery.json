@@ -1,7 +1,7 @@
 {
     "name": "css-event-queue",
     "title": "CSS Event Queue",
-    "description": "CSS Event Queue - Synchronous / Asynchronous Javascript event queue for CSS Classes",
+    "description": "CSS Event Queue - Synchronous / Asynchronous Javascript event queue for CSS Classes. Add and remove arrays of classes, with timing support, object targeting, and 4 common event options.",
     "keywords": [
         "jquery",
         "queue",
