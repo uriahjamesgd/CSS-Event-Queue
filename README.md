@@ -1,7 +1,7 @@
 CSS Event Queue
 ===============
 
-CSS Event Queue - Synchronous / Asynchronous Javascript event queue for CSS Classes
+CSS Event Queue - Synchronous / Asynchronous Javascript event queue for CSS Classes. Add and remove arrays of classes, with timing support, object targeting, and 4 common event options.
 
 
 ## How it works
