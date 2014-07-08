@@ -33,13 +33,7 @@ Allows you to both ADD and REMOVE CSS classes from DOM elements, synchronously a
 
 ***e.g. : {'task_onDomLd_animation3': '+lightSpeedIn_200'}***
 
-1.) Object being targeted (the values separated by an 'UNDERSCORE' are important): 
-  
-   * task_ : Specifies that this is a scheduled task
-   
-   * onDomLd_ : Specifies that this task (e.g. event) will execute once the DOM or page has fully loaded. There ar also 4 other event types: onClick_ | onHover_ | onDomLd_ | onActiveC
-   
-   * animation3 : Specifies the UNIQUE Task Scheduler name. This name can be whatever you like it to be, but it MUST EXACTLY MATCH the task scheduler ARRAY NAME. To better understand this, please examine the sample files contained within this repository.
+1.) Object being targeted (the values separated by an 'UNDERSCORE' are important): task_ : Specifies that this is a scheduled task; onDomLd_ : Specifies that this task (e.g. event) will execute once the DOM or page has fully loaded. There ar also 4 other event types: onClick_ | onHover_ | onDomLd_ | onActiveC; animation3 : Specifies the UNIQUE Task Scheduler name. This name can be whatever you like it to be, but it MUST EXACTLY MATCH the task scheduler ARRAY NAME. To better understand this, please examine the sample files contained within this repository.
 
     `task_onDomLd_animation3`
     
