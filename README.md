@@ -24,7 +24,7 @@ Allows you to both ADD and REMOVE CSS classes from DOM elements, synchronously a
   
   2.) Whether a class is to be Added or Removed (+,-)
   
-  3.) Specify: The class name to be added
+  3.) The class name to be added
   
   4.) The duration (If your duration is '300' then your class will be either Added or Removed after '300' milliseconds)
 
@@ -37,7 +37,7 @@ Allows you to both ADD and REMOVE CSS classes from DOM elements, synchronously a
 
     task_onDomLd_animation3
     
-  2.) Whether a class is to be Added or Removed (class is being added is this example)
+  2.) Whether a class is to be Added or Removed (class is being added in this example)
   
     +
 
