@@ -22,7 +22,7 @@ Allows you to both ADD and REMOVE CSS classes from DOM elements, synchronously a
 
   1.) Object being targeted
   
-  2.) Whether a class is to be Added or Removed (+,-)
+  2.) Whether a class is to be Added or Removed (`+`,`-`)
   
   3.) The class name to be added
   
