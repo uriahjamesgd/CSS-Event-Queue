@@ -33,7 +33,7 @@ Allows you to both ADD and REMOVE CSS classes from DOM elements, synchronously a
 
 ***e.g. : {'task_onDomLd_animation3': '+lightSpeedIn_200'}***
 
-  1.) Object being targeted (the values separated by an 'UNDERSCORE' are important): 
+1.) Object being targeted (the values separated by an 'UNDERSCORE' are important): 
   
    * task_ : Specifies that this is a scheduled task
    
@@ -43,14 +43,14 @@ Allows you to both ADD and REMOVE CSS classes from DOM elements, synchronously a
 
     `task_onDomLd_animation3`
     
-  2.) Whether a class is to be Added or Removed (class is being added in this example)
+2.) Whether a class is to be Added or Removed (class is being added in this example)
   
     `+`
     
-  3.) The class name to be added
+3.) The class name to be added
   
     `lightSpeedIn`
   
-  4.) The duration: (in this example the class 'lightSpeedIn' will be added to 'task_onDomLd_animation3' after '200' milliseconds has elapsed)
+4.) The duration: (in this example the class 'lightSpeedIn' will be added to 'task_onDomLd_animation3' after '200' milliseconds has elapsed)
   
     `200`
