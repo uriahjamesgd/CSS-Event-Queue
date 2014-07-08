@@ -41,16 +41,16 @@ Allows you to both ADD and REMOVE CSS classes from DOM elements, synchronously a
    
    * animation3 : Specifies the UNIQUE Task Scheduler name. This name can be whatever you like it to be, but it MUST EXACTLY MATCH the task scheduler ARRAY NAME. To better understand this, please examine the sample files contained within this repository.
 
-    'task_onDomLd_animation3'
+    `task_onDomLd_animation3`
     
   2.) Whether a class is to be Added or Removed (class is being added in this example)
   
-    '+'
+    `+`
     
   3.) The class name to be added
   
-    'lightSpeedIn'
+    `lightSpeedIn`
   
   4.) The duration: (in this example the class 'lightSpeedIn' will be added to 'task_onDomLd_animation3' after '200' milliseconds has elapsed)
   
-    '200'
+    `200`
